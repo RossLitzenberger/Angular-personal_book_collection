@@ -4,6 +4,7 @@
 
  // Declare app level module which depends on filters, and services
 var a = angular.module('readingList', []);
+
 a.controller('ReadingListController', function(){
   this.books = books;
   this.genres = genres;
