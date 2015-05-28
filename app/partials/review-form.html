@@ -19,12 +19,7 @@
 
       <p>{{reviewFormCtrl.book.reivew}}</p>
 
-      <!-- no, no! <book-genres></book-genres> -->
-      <ul class="list-unstyled">
-        <li ng-repeat="(genre, state) in reviewFormCtrl.book.genres">
-          <span class="label label-primary">{{genre}}</span>
-        </li>
-      </ul>
+      <book-genres genres="reviewFormCtrl.book.genres"></book-genres>
     </div>
   </section>
 
