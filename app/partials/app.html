@@ -16,9 +16,10 @@
         <h3><a href="http://www.amazon.com/gp/product/{{book.isbn}}">{{book.title}}</a></h3>
         <cite class="text-muted">Written by {{book.author}}</cite>
         <p>{{book.review}}</p>
-        
         <ul class="list-inline">
-          <li> <span class="label label-primary">book Genre</span> </li>
+          <li>
+            <span ng-repeat="(genre, state) in book.genres" ng-show="state" class="label label-primary">{{genre}}</span> 
+          </li>
         </ul>
       </div>
     </li>
