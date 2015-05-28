@@ -5,7 +5,7 @@
  // Declare app level module which depends on filters, and services
   angular.module('readingList', [])
 
-    .controller('ReadingListController', function(){
+  .controller('ReadingListController', function(){
     this.books = books;
     this.genres = genres;
   })
@@ -22,6 +22,20 @@
       restrict: 'E',
       templateUrl: 'partials/book-cover.html',
       replace: true
+    }
+  })
+
+  .directive('reviewForm', function(){
+    return{
+      restrict: 'E',
+      templateUrl: 'partials/review-form.html',
+      replace: true,
+      controller: function(){
+        this.showForm = false;
+
+      },
+      controllerAs: 'reviewFormCtrl'
+
     }
   });
 
