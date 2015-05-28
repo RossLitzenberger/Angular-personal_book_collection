@@ -32,7 +32,7 @@
       replace: true,
       controller: function(){
         this.showForm = false;
-        this.book = {};
+        this.book = {genres:{}};
       },
       controllerAs: 'reviewFormCtrl',
       // allow pass for books and genres
