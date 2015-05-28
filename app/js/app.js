@@ -32,9 +32,14 @@
       replace: true,
       controller: function(){
         this.showForm = false;
-
+        this.book = {};
       },
-      controllerAs: 'reviewFormCtrl'
+      controllerAs: 'reviewFormCtrl',
+      // allow pass for books and genres
+      scope:{
+        books: '=',
+        genres: '=',
+      }
 
     }
   });
